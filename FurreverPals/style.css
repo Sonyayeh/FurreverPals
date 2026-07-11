@@ -1,0 +1,631 @@
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── Tokens ── */
+    :root {
+      --cream: #F5E6C8;
+      --yellow: #F0D080;
+      --black: #1a1a1a;
+      --white: #ffffff;
+      --grey: #888;
+      --card-bg: #ffffff;
+      --pink: #eaa596;
+      --mint: #9ed8bd;
+      --purple: #7f32da;
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+      --font-h1: 'DarumaDrip';
+    }
+
+
+    /* font */
+    @font-face {
+    font-family: 'DarumaDrop';
+    src: url('assets/fonts/DarumadropOne-Regular.ttf') format('truetype');
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    /* ── Announcement Bar ── */
+    .announcement-bar {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Top Nav ── */
+    .top-nav {
+      background: var(--black);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 48px;
+      height: 48px;
+    }
+
+    .top-nav .nav-right {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      align-items: center;
+      color: var(--white);
+      font-size: 13px;
+    }
+
+    .top-nav .nav-right span { cursor: pointer; }
+
+    /* ── Main Nav ── */
+    .main-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 16px 48px;
+    }
+
+    .main-nav .nav-left,
+    .main-nav .nav-right {
+      display: flex;
+      gap: 100px;
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      font-family: 'Darumadrop';
+    }
+
+    .main-nav .nav-right { justify-content: flex-end; }
+
+    .main-nav .logo {
+      font-family: var(--font-display);
+      font-size: 50px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .main-nav a:hover { 
+        color: var(--purple);
+        text-decoration: underline;
+    }
+
+    /* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--black);
+  transition: all 0.3s ease;
+}
+
+/* Hamburger X animation when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile Menu ── */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--cream);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 16px 24px;
+  gap: 16px;
+}
+
+.mobile-menu a {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-family: 'Darumadrop';
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+    /* ── Hero Carousel ── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: #ccc;
+}
+
+.hero-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-placeholder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  
+}
+
+.hero-placeholder img.active {
+  opacity: 1;
+}
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--cream);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .carousel-btn:hover { background: var(--pink); }
+    .carousel-btn.prev { left: 20px; }
+    .carousel-btn.next { right: 20px; }
+
+    /* ── Sections ── */
+    section { padding: 72px 48px; }
+
+    .section-title {
+      font-family: 'DarumaDrop', sans-serif;
+      font-size: 45px;
+      text-decoration: underline dashed 3.5px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--mint);
+    }
+    .class-section-title {
+        font-family: 'DarumaDrop', sans-serif;
+      font-size: 45px;
+      text-decoration: underline dashed 3.5px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--cream);
+    }
+
+    /* ── About Us ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-image {
+      width: 100%;
+      aspect-ratio: 4.5/5;
+      
+      border-radius: 4px;
+      overflow: hidden;
+      border: 5px solid var(--mint);
+      border-style: dotted;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-text p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 32px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: var(--white);
+      padding: 10px 28px;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font-body);
+      color: var(--pink);
+    }
+
+    .btn-outline:hover {
+      background: var(--pink);
+      color: var(--white);
+    }
+
+    /* ── Classes of the Month ── */
+    .classes-section-classes { background: var(--mint); }
+
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .class-card {
+      background: var(--card-bg);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .class-card-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #ccc;
+      overflow: hidden;
+    }
+
+    .class-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .class-card-date {
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #555;
+      text-align: center;
+    }
+
+    .classes-cta { text-align: center; }
+
+    /* ── Reviews Carousel ── */
+    
+
+    .reviews-carousel {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .reviews-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .reviews-slide {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      min-width: 100%;
+    }
+
+    .review-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 20px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 12px;
+}
+
+    .review-card:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 2px var(--pink);
+    }
+
+    .review-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #ccc;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .review-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .review-text {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .review-author {
+      font-size: 12px;
+      font-weight: 600;
+      text-align: right;
+      color: var(--purple);
+      font-family: 'Darumadrop';
+    }
+
+    .reviews-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+      color: var(--purple);
+    }
+
+    .reviews-dots {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--white);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .dot.active { background: var(--purple); }
+
+    /* the review carousel buttons */
+    .carousel-btn-sm {
+      background: none;
+      border: none;
+      font-size: 65px;
+      cursor: pointer;
+      padding: 4px 12px;
+      color: var(--white);
+    }
+
+    .carousel-btn-sm:hover {
+        color: var(--pink);
+    }
+
+    /* ── Newsletter ── */
+    .newsletter-section {
+      background: var(--cream);
+      padding: 56px 48px;
+      text-align: center;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .newsletter-section h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-section p {
+      font-size: 13px;
+      color: var(--grey);
+      margin-bottom: 24px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 10px 16px;
+      border: 1px solid var(--black);
+      border-right: none;
+      font-family: var(--font-body);
+      font-size: 13px;
+      background: transparent;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      padding: 10px 20px;
+      background: var(--black);
+      color: var(--white);
+      border: 1px solid var(--black);
+      font-size: 13px;
+      cursor: pointer;
+      font-family: var(--font-body);
+      transition: opacity 0.2s;
+    }
+
+    .newsletter-form button:hover { opacity: 0.8; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 24px 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+
+    footer .footer-copy {
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    footer .social-links {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    footer .social-links a { opacity: 0.7; transition: opacity 0.2s; }
+    footer .social-links a:hover { opacity: 1; }
+
+   /* ── Mobile (under 768px) ── */
+@media (max-width: 767px) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+  }
+
+  .main-nav .nav-left,
+  .main-nav .nav-right {
+    display: none;
+  }
+
+  .main-nav .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .main-nav {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 24px;
+  }
+
+  .main-nav .nav-left,
+  .main-nav .nav-right {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-slide {
+    grid-template-columns: 1fr;
+  }
+
+  section { padding: 48px 24px; }
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+
+  footer .social-links { justify-content: center; }
+
+  .hero { height: 260px; }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    border-right: 1px solid var(--black);
+    border-bottom: none;
+  }
+}
+
+/* ── Tablet (768px) ── */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main-nav {
+    padding: 16px 32px;
+  }
+
+  .main-nav .nav-left,
+  .main-nav .nav-right {
+    gap: 100px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .classes-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 950px;
+  }
+
+  .reviews-slide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section { padding: 56px 32px; }
+
+  .hero { height: 340px; }
+
+  footer { padding: 24px 32px; }
+}
+
+/* ── Desktop (1280px+) ── */
+@media (min-width: 1280px) {
+  .main-nav {
+    padding: 16px 64px;
+  }
+
+  .about-grid {
+    max-width: 1100px;
+    gap: 80px;
+  }
+
+  .classes-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+  }
+
+  .reviews-slide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews-carousel {
+    max-width: 1100px;
+  }
+
+  .hero { height: 500px; }
+
+  section { padding: 80px 64px; }
+
+  footer { padding: 24px 64px; }
+}

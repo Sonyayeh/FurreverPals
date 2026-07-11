@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furrever Pals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">NEW MEMBERS 10% OFF
+      <!-- Top Nav (icons) -->
+      <nav class="top-nav">
+        <div></div>
+        <div></div>
+        <div class="nav-right">
+          <span>🔍 Search</span>
+          <span>🛒</span>
+          <span>👤</span>
+        </div>
+  </div>
+
+</nav>
+
+  <!-- Main Nav -->
+<nav class="main-nav">
+  <div class="nav-left">
+    <a href="#">Classes</a>
+    <a href="Mission.html">Our Mission</a>
+  </div>
+  <div class="logo">
+    <a href="Home.html">
+        <img src="assets/logo/furrever pals logo 1.png" alt="logo for Furrever Pals" />
+    </a>
+  </div>
+  <div class="nav-right">
+    <a href="#">Adoption</a>
+    <a href="#">About Us</a>
+  </div>
+  <!-- Hamburger button, hidden on desktop -->
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu dropdown -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">Classes</a>
+  <a href="#">Our Mission</a>
+  <a href="#">Adoption</a>
+  <a href="#">About Us</a>
+</div>
+
+  <!-- Hero Carousel -->
+  <div class="hero">
+    <div class="hero-placeholder">
+        <img src="assets/banner/banner1.jpg" class="active" alt="hero banner" />
+        <img src="assets/banner/banner2.jpg" alt="hero" />
+        <img src="assets/banner/banner3.jpg" alt="hero" />
+        <img src="assets/banner/banner4.jpg" alt="hero" />
+    </div>
+    <button class="carousel-btn prev" onclick="heroSlide(-1)">‹</button>
+    <button class="carousel-btn next" onclick="heroSlide(1)">›</button>
+  </div>
+
+  <!-- About Us -->
+  <section>
+    <h2 class="section-title">About Us</h2>
+    <div class="about-grid">
+      <div class="about-image">
+        <!-- Replace src with your actual image -->
+        <div>
+            <img src="assets/aboutus.png" alt="person doing yoga with a corgi"/>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>At Furrever Pals, we believe wellness is more than a workout. It's a feeling. Our puppy yoga classes are designed to nurture your body, ease your mind, and melt away the stress of everyday life, all while surrounded by the most joyful co-instructors you will ever meet.</p>
+        <p>Whether you are brand new to yoga or have been practicing for years, there is a place for you here. Furrever Pals is a space where community, movement, and pure puppy energy come together to create something a little unexpected and a lot good for you.</p>
+        <p>Come as you are. Leave feeling lighter.</p>
+        <a href="#" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes of the Month -->
+  <section class="classes-section-classes">
+    <h2 class="class-section-title">Classes of the Month</h2>
+    <div class="classes-grid">
+      <div class="class-card">
+        <div class="class-card-image">
+          <div style="width:100%;height:100%;background:#c8b89a;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px;">Class photo</div>
+        </div>
+        <div class="class-card-date">June 5, 2024</div>
+      </div>
+      <div class="class-card">
+        <div class="class-card-image">
+          <div style="width:100%;height:100%;background:#c8b89a;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px;">Class photo</div>
+        </div>
+        <div class="class-card-date">June 6, 2024</div>
+      </div>
+      <div class="class-card">
+        <div class="class-card-image">
+          <div style="width:100%;height:100%;background:#c8b89a;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px;">Class photo</div>
+        </div>
+        <div class="class-card-date">June 7, 2024</div>
+      </div>
+    </div>
+    <div class="classes-cta">
+      <a href="#" class="btn-outline">View All</a>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews-section">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="reviews-carousel">
+      <div class="reviews-track" id="reviewsTrack">
+
+        <!-- Slide 1 -->
+        <div class="reviews-slide">
+          <div class="review-card">
+            <div class="review-image">
+             <img src="assets/review/Marcus.jpg" alt="Man and daughter playing with a puppy"/>
+            </div>
+            <p class="review-text">My daughter and I are huge fans of dogs, and we happened to meet our newest addition to the family at Furrever Pals. Every day feels like an adventure now!</p>
+            <div class="review-author">Marcus P</div>
+          </div>
+          <div class="review-card">
+            <div class="review-image">
+             <img src="assets/review/Eric.jpg" alt="Man playing with a puppy"/>
+            </div>
+            <p class="review-text">Being in a new city was difficult, and I needed a distraction. I decided to give Furrever Pals a try and came home with my forever friend, Georgie. Thank you, Furrever Pals!</p>
+            <div class="review-author">Eric F</div>
+          </div>
+          <div class="review-card">
+            <div class="review-image">
+              <img src="assets/review/Miranda.jpg" alt="a corgi with a fluffy and bushy tail"/>
+            </div>
+            <p class="review-text">My husband and I are huge corgi fans but never knew where to find one. We went to Furrever Pals with a friend and encountered Gnocchi!</p>
+            <div class="review-author">Miranda G</div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="reviews-slide">
+          <div class="review-card">
+            <div class="review-image">
+              <img src="assets/review/David.jpg" alt="a little boy hugging a golden retriever with a big smile"/>
+            </div>
+            <p class="review-text">My shy son was laughing with strangers within minutes. The puppies just have that effect on people!</p>
+            <div class="review-author">David E</div>
+          </div>
+          <div class="review-card">
+            <div class="review-image">
+             <img src="assets/review/Jordan.jpeg" alt="a woman playing with a black puppy"/>
+            </div>
+            <p class="review-text">I dragged my boyfriend here thinking he would hate it. He spent the entire class with a golden retriever on his lap and we ended up bringing her home!</p>
+            <div class="review-author">Jordan A</div>
+          </div>
+          <div class="review-card">
+            <div class="review-image">
+             <img src="assets/review/Rana.jpeg" alt="a woman posing with her goofy doggo"/>
+            </div>
+            <p class="review-text">Came for the yoga, stayed for the puppies, and somehow drove home with a new family member. Meet Lumi!</p>
+            <div class="review-author">Rana O</div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="reviews-slide">
+          <div class="review-card">
+            <div class="review-image">
+             <img src="assets/review/Taylor.jpeg" alt="a woman smiling and hugging her corgi"/>
+            </div>
+            <p class="review-text">I told myself I was just there for the yoga. Then I met Waffles. Waffles lives with me now and I had zero regrets!</p>
+            <div class="review-author">Taylor H</div>
+          </div>
+          <div class="review-card">
+            <div class="review-image">
+             <img src="assets/review/Michelle.jpeg" alt="a woman doing paw with her doggo"/>
+            </div>
+            <p class="review-text">My kids begged me for a dog for years. One class at Furrever Pals and I finally understood why. We adopted Butterscotch on the spot.</p>
+            <div class="review-author">Michelle P</div>
+          </div>
+          <div class="review-card">
+            <div class="review-image">
+              <img src="assets/review/James.jpg" alt="Man hugging a big fluffy white dog"/>
+            </div>
+            <p class="review-text">We went as a couple and came home as a family of three. Our new pup Dumpling has been the best decision we ever made.</p>
+            <div class="review-author">James L</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dots + Arrows -->
+      <div class="reviews-nav">
+        <button class="carousel-btn-sm" onclick="reviewSlide(-1)">‹</button>
+        <div class="reviews-dots" id="reviewDots"></div>
+        <button class="carousel-btn-sm" onclick="reviewSlide(1)">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <div class="newsletter-section">
+    <h3>Sign up for our newsletter</h3>
+    <p>Receive our weekly special newsletter and potential exclusive deals</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your Email" />
+      <button>Sign Up</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-copy">© 2024, Furrever Pals — Powered by WordPress</div>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">X</a>
+    </div>
+  </footer>
+
+ <script>
+  // ── Reviews Carousel ──
+  let currentPage = 0;
+
+  function goToPage(page) {
+    const track = document.getElementById('reviewsTrack');
+    const slides = track.querySelectorAll('.reviews-slide');
+    const totalPages = slides.length;
+    currentPage = (page + totalPages) % totalPages;
+    track.style.transform = `translateX(-${currentPage * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === currentPage);
+    });
+  }
+
+  function reviewSlide(dir) { goToPage(currentPage + dir); }
+
+  function setupReviews() {
+    const isMobile = window.innerWidth < 768;
+    const allCards = Array.from(document.querySelectorAll('.review-card'));
+    const track = document.getElementById('reviewsTrack');
+    const dotsContainer = document.getElementById('reviewDots');
+
+    track.innerHTML = '';
+    dotsContainer.innerHTML = '';
+    currentPage = 0;
+    track.style.transform = 'translateX(0)';
+
+    const cardsPerSlide = isMobile ? 1 : 3;
+    const totalSlides = Math.ceil(allCards.length / cardsPerSlide);
+
+    for (let i = 0; i < totalSlides; i++) {
+      const slide = document.createElement('div');
+      slide.className = 'reviews-slide';
+      for (let j = i * cardsPerSlide; j < Math.min((i + 1) * cardsPerSlide, allCards.length); j++) {
+        slide.appendChild(allCards[j]);
+      }
+      track.appendChild(slide);
+    }
+
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => goToPage(i);
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  //hamburger menu
+  function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+  menu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+}
+
+  // ── Hero Carousel ──
+  const heroImgs = document.querySelectorAll('.hero-placeholder img');
+  let heroIndex = 0;
+  let heroTimer;
+
+  if (heroImgs.length > 0) heroImgs[0].classList.add('active');
+
+  function heroSlide(dir) {
+    heroImgs[heroIndex].classList.remove('active');
+    heroIndex = (heroIndex + dir + heroImgs.length) % heroImgs.length;
+    heroImgs[heroIndex].classList.add('active');
+    resetHeroTimer();
+  }
+
+  function resetHeroTimer() {
+    clearInterval(heroTimer);
+    heroTimer = setInterval(() => heroSlide(1), 4000);
+  }
+
+  // Run on load and resize
+  setupReviews();
+  window.addEventListener('resize', setupReviews);
+  resetHeroTimer();
+</script>
+
+</body>
+</html>
