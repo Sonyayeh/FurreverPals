@@ -53,9 +53,85 @@
 </div>
 
 <!-- the top section of the page -->
- <section>
-     <h2 class="section-title"> What Makes us Special?</h2>
-     <p>placeholder here!</p>
- </section>
+<section>
+  <h2 class="mission-section-subtitle ">What Makes us Special?</h2>
+  <div>
+    <p class="mission-paragraph">Lorem ipsum dolor sit amet consectetur. Diam egestas non dictum id. Etiam sapien sit elementum ultricies tellus sed varius. Nisl enim sed eu quis. Nulla consequat sapien nisi nisl. Scelerisque diam pellentesque at dolor. Adipiscing odio sit sit dignissim viverra scelerisque viverra pretium. Nulla cum adipiscing gravida massa morbi risus. Aliquet et in consectetur ante mauris commodo. Nec arcu consequat vel mauris rhoncus lorem fringilla. Vivamus porttitor enim erat sapien commodo. Eu libero vitae porttitor sed velit tristique ac dignissim.</p>
+    <img src="assets/mission/mission-banner.jpg" alt="woman doing yoga with a golden retriever" class="mission-banner"/>
+  </div>
+</section>
+
+<section class="mission-section mission-section">
+  <h2 class="mission-section-title">Our Mission</h2>
+
+  <!-- Row 1: image left, text right -->
+  <div class="mission-row fade-in">
+    <div class="mission-image">
+      <img src="assets/mission/mission-pic1.jpeg" alt="mission image 1" />
+    </div>
+    <div class="mission-right">
+      <p class="mission-s-paragraph">Lorem ipsum dolor sit amet consectetur. Diam egestas non dictum id. Etiam sapien sit elementum ultricies tellus sed varius. Nisl enim sed eu quis. Nulla consequat sapien nisi nisl. Scelerisque diam pellentesque at dolor. Adipiscing odio sit sit dignissim viverra scelerisque viverra pretium. Nulla cum adipiscing gravida massa morbi risus. Aliquet et in consectetur ante mauris commodo. Nec arcu consequat vel mauris rhoncus lorem fringilla. Vivamus porttitor enim erat sapien commodo. Eu libero vitae porttitor sed velit tristique ac dignissim.</p>
+    </div>
+  </div>
+
+  <!-- Row 2: text left, image right -->
+  <div class="mission-row reverse fade-in">
+    <div class="mission-image">
+      <img src="assets/mission/mission-pic2.png" alt="mission image 2" />
+    </div>
+    <div class="mission-text">
+      <p class="mission-s-paragraph">Lorem ipsum dolor sit amet consectetur. Diam egestas non dictum id. Etiam sapien sit elementum ultricies tellus sed varius. Nisl enim sed eu quis. Nulla consequat sapien nisi nisl. Scelerisque diam pellentesque at dolor. Adipiscing odio sit sit dignissim viverra scelerisque viverra pretium. Nulla cum adipiscing gravida massa morbi risus. Aliquet et in consectetur ante mauris commodo. Nec arcu consequat vel mauris rhoncus lorem fringilla. Vivamus porttitor enim erat sapien commodo. Eu libero vitae porttitor sed velit tristique ac dignissim.</p>
+    </div>
+  </div>
+  </section>
+
+  <section>
+  <div>
+    <h2 class="mission-section-subtitle"> Want to Adopt?</h2>
+    <div class="mission-paragraph">
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Diam egestas non dictum id. Etiam sapien sit elementum ultricies tellus sed varius. Nisl enim sed eu quis. Nulla consequat sapien nisi nisl. Scelerisque diam pellentesque at dolor. Adipiscing odio sit sit dignissim viverra scelerisque viverra pretium. Nulla cum adipiscing gravida massa morbi risus. Aliquet et in consectetur ante mauris commodo. Nec arcu consequat vel mauris rhoncus lorem fringilla. Vivamus porttitor enim erat sapien commodo. Eu libero vitae porttitor sed velit tristique ac dignissim.
+      </p>
+    </div>
+  </div>
+  
+</section>
+
+<!-- Footer -->
+ <footer>
+   <div class="footer-copy">© 2024, Furrever Pals — Powered by WordPress</div>
+   <div class="social-links">
+     <a href="#">Instagram</a>
+     <a href="#">Facebook</a>
+     <a href="#">X</a>
+   </div>
+ </footer>
+
+ <script>
+   //hamburger menu
+  function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+  menu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+}
+
+// ── Fade In on Scroll ──
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // only animate once
+    }
+  });
+}, {
+  threshold: 0.15 // triggers when 15% of element is visible
+});
+
+fadeElements.forEach(el => observer.observe(el));
+
+ </script>
 </body>
 </html>

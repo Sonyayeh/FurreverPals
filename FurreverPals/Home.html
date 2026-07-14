@@ -70,7 +70,7 @@
   <!-- About Us -->
   <section>
     <h2 class="section-title">About Us</h2>
-    <div class="about-grid">
+    <div class="about-grid fade-in">
       <div class="about-image">
         <!-- Replace src with your actual image -->
         <div>
@@ -81,7 +81,7 @@
         <p>At Furrever Pals, we believe wellness is more than a workout. It's a feeling. Our puppy yoga classes are designed to nurture your body, ease your mind, and melt away the stress of everyday life, all while surrounded by the most joyful co-instructors you will ever meet.</p>
         <p>Whether you are brand new to yoga or have been practicing for years, there is a place for you here. Furrever Pals is a space where community, movement, and pure puppy energy come together to create something a little unexpected and a lot good for you.</p>
         <p>Come as you are. Leave feeling lighter.</p>
-        <a href="#" class="btn-outline">Learn More</a>
+        <a href="Mission.html" class="btn-outline">Learn More</a>
       </div>
     </div>
   </section>
@@ -89,7 +89,7 @@
   <!-- Classes of the Month -->
   <section class="classes-section-classes">
     <h2 class="class-section-title">Classes of the Month</h2>
-    <div class="classes-grid">
+    <div class="classes-grid fade-in">
       <div class="class-card">
         <div class="class-card-image">
           <div style="width:100%;height:100%;background:#c8b89a;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px;">Class photo</div>
@@ -117,7 +117,7 @@
   <!-- Customer Reviews -->
   <section class="reviews-section">
     <h2 class="section-title">Customer Reviews</h2>
-    <div class="reviews-carousel">
+    <div class="reviews-carousel fade-in">
       <div class="reviews-track" id="reviewsTrack">
 
         <!-- Slide 1 -->
@@ -273,6 +273,22 @@
       dotsContainer.appendChild(dot);
     }
   }
+
+  // ── Fade In on Scroll ──
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // only animate once
+    }
+  });
+}, {
+  threshold: 0.15 // triggers when 15% of element is visible
+});
+
+fadeElements.forEach(el => observer.observe(el));
 
   //hamburger menu
   function toggleMenu() {

@@ -211,7 +211,25 @@
       font-weight: 600;
       text-align: center;
       margin-bottom: 48px;
-      color: var(--mint);
+      color: var(--purple);
+    }
+    .mission-section-title {
+      font-family: 'DarumaDrop', sans-serif;
+      font-size: 45px;
+      text-decoration: underline dashed 3.5px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--white);
+    }
+    .mission-section-subtitle {
+      font-family: 'DarumaDrop', sans-serif;
+      font-size: 45px;
+      text-decoration: underline dashed 3.5px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--pink);
     }
     .class-section-title {
         font-family: 'DarumaDrop', sans-serif;
@@ -275,6 +293,8 @@
 
     /* ── Classes of the Month ── */
     .classes-section-classes { background: var(--mint); }
+    /* ── Mission page's Our Mission section, need to rename this section tho ── */
+    .mission-section { background: var(--pink); }
 
     .classes-grid {
       display: grid;
@@ -494,6 +514,82 @@
 
     footer .social-links a { opacity: 0.7; transition: opacity 0.2s; }
     footer .social-links a:hover { opacity: 1; }
+
+    /*Mission Page*/
+    .mission-paragraph {
+      justify-content: center;
+      text-align: center;
+      line-height: 1.9;
+      padding-bottom: 3rem;
+      color: var(--black);
+    }
+    .mission-s-paragraph {
+      justify-content: center;
+      text-align: center;
+      line-height: 1.9;
+      color: var(--white);
+    }
+
+    .mission-banner {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .mission-text-right {
+      text-align: left;
+    }
+
+    .mission-s-paragraph {
+      gap: 48px;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto 0px;
+      display: grid;
+      grid-template-columns: 1fr;
+      line-height: 1.9;
+    }
+
+    .mission-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1000px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+  }
+
+    .mission-row.reverse .mission-image {
+    order: 2;
+  }
+
+  .mission-row.reverse .mission-text {
+    order: 1;
+  }
+
+  .mission-image {
+    width: 90%;
+    height: 100%;
+  }
+
+
+  /* Animation Effects */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
 
    /* ── Mobile (under 768px) ── */
 @media (max-width: 767px) {
