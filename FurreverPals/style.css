@@ -25,6 +25,10 @@
     font-family: 'DarumaDrop';
     src: url('assets/fonts/DarumadropOne-Regular.ttf') format('truetype');
     }
+    @font-face {
+    font-family: 'Nunito';
+    src: url('assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+    }
 
     body {
       font-family: var(--font-body);
@@ -126,6 +130,7 @@
 .hamburger.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+
 
 /* ── Mobile Menu ── */
 .mobile-menu {
@@ -231,6 +236,47 @@
       margin-bottom: 48px;
       color: var(--pink);
     }
+    .adopt-section-subtitle {
+      font-family: 'DarumaDrop', sans-serif;
+      font-size: 45px;
+      text-decoration: underline dashed 3.5px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--pink);
+    }
+    .adoption-section-title {
+      font-family: 'DarumaDrop', sans-serif;
+      font-size: 45px;
+      text-decoration: underline dashed 3.5px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--cream);
+    }
+    .adoption-paragraph {
+      justify-content: center;
+      text-align: center;
+      line-height: 1.9;
+      color: var(--black);
+    }
+    .adoption-end-paragraph {
+      justify-content: center;
+      text-align: center;
+      line-height: 1.9;
+      color: var(--purple);
+    }
+
+    .adoption-s-paragraph {
+      justify-content: left;
+      text-align: left;
+      line-height: 1.9;
+      padding-bottom: 3rem;
+      color: var(--white);
+      font-family: 'Nunito';
+    }
+    
+
     .class-section-title {
         font-family: 'DarumaDrop', sans-serif;
       font-size: 45px;
@@ -291,10 +337,38 @@
       color: var(--white);
     }
 
+    /* for the adoption file*/
+    .adopt-btn-outline {
+    display: inline-block;
+    padding: 18px 28px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-body);
+    color: var(--pink);
+    background: var(--white);
+    margin: 20px 20px;
+  }
+  .adopt-btn-container {
+    text-align: center;
+    
+  }
+
+    .adopt-btn-outline:hover {
+      background: var(--pink);
+      color: var(--white);
+    }
+
     /* ── Classes of the Month ── */
     .classes-section-classes { background: var(--mint); }
+
     /* ── Mission page's Our Mission section, need to rename this section tho ── */
     .mission-section { background: var(--pink); }
+
+    /* ── Adoption page's Adoption section, need to rename this section tho ── */
+    .adoption-section { background: var(--pink); }
+    .adoption-subsection { background: var(--yellow); }
 
     .classes-grid {
       display: grid;
@@ -570,6 +644,30 @@
   }
 
   .mission-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*adoption version*/
+    .adopt-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1000px;
+    /* padding-bottom: 50px; */
+    margin: 0 auto;
+  }
+
+    .adopt-row.reverse .mission-image {
+    order: 2;
+  }
+
+  .adopt-row.reverse .mission-text {
+    order: 1;
+  }
+
+  .adopt-image {
     width: 90%;
     height: 100%;
   }
@@ -587,6 +685,59 @@
   transform: translateY(0);
 }
 
+/* The drop down menu in the adoption page*/
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.accordion-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-family: var(--font-body);
+  color: var(--min);
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-btn.open .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content.open {
+  max-height: 200px;
+  padding-bottom: 20px;
+}
+
+.accordion-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--purple);
+  font-family: 'Nunito';
+}
 
 
 
@@ -614,6 +765,42 @@
   .hamburger {
     display: flex;
   }
+
+  .adopt-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .adopt-row.reverse .mission-image {
+    order: 0;
+  }
+
+  .adopt-row.reverse .mission-text {
+    order: 0;
+  }
+
+  .adopt-image {
+    width: 100%;
+  }
+
+  .mission-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .mission-row.reverse .mission-image {
+    order: 0;
+  }
+
+  .mission-row.reverse .mission-text {
+    order: 0;
+  }
+
+  .adopt-image {
+    width: 100%;
+  }
+
+
 }
 @media (max-width: 767px) {
   .main-nav {
@@ -641,7 +828,7 @@
     grid-template-columns: 1fr;
   }
 
-  section { padding: 48px 24px; }
+  section { padding: 30px 24px; }
 
   footer {
     grid-template-columns: 1fr;

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Top Nav (icons) -->
+  <nav class="top-nav">
+    <div></div>
+    <div></div>
+    <div class="nav-right">
+      <span>🔍 Search</span>
+      <span>🛒</span>
+      <span>👤</span>
+    </div>
+  </nav>
+
+     <!-- Main Nav -->
+<nav class="main-nav">
+  <div class="nav-left">
+    <a href="#">Classes</a>
+    <a href="Mission.html">Adoption</a>
+  </div>
+ <div class="logo">
+    <a href="Home.html">
+        <img src="assets/logo/furrever pals logo 1.png" alt="logo for Furrever Pals" />
+    </a>
+  </div>
+  <div class="nav-right">
+    <a href="Adopt.html">Adoption</a>
+    <a href="#">About Us</a>
+  </div>
+
+  <!-- Hamburger button, hidden on desktop -->
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu dropdown -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">Classes</a>
+  <a href="Mission.html">Our Mission</a>
+  <a href="Adopt.html">Adoption</a>
+  <a href="#">About Us</a>
+</div>
+
+<!-- the top section of the page -->
+<section>
+  <h2 class="adopt-section-subtitle ">Want to Adopt?</h2>
+  <div>
+    <p class="adoption-paragraph">Are you thinking about bringing home a forever friend? We are so happy you are here. At Furrever Pals, every puppy you meet in our classes is a rescue looking for their perfect match, and that match might just be you.
+    <br>
+    <br>
+    All of our adoptions are supported by our longtime partner, <i><b>the International Dogs Rescue</b></i>, an organisation dedicated to giving every dog a second chance at a loving home. When you adopt through Furrever Pals, you are not just gaining a companion. You are giving a rescue pup the fresh start they deserve!
+    <br>
+  </div>
+</section>
+
+
+<section class="adoption-section mission-section">
+  <h2 class="adoption-section-title">Requirements</h2>
+
+  <!-- Row 1: image left, text right -->
+  <div class="adopt-row fade-in">
+    <div class="mission-image">
+      <img src="assets/mission/mission-pic1.jpeg" alt="mission image 1" />
+    </div>
+      <p class="adoption-s-paragraph"> To make sure that all of our puppies are going to their forever happy home, our ideal candidates are expected to have plenty of patience and the ability to provide them attention and care when needed since all of our puppies are young and playful. <br><br>If you are a first time dog owner, you are absolutely welcome! We simply ask that you attend at least one of our puppy yoga classes beforehand so you can get a feel for caring for a young dog.</p>
+    </div>
+  </div>
+ </section>
+
+  <section>
+  <div>
+    <h2 class="mission-section-subtitle"> Adoption FAQ</h2>
+    <div class="adoption-paragraph">
+    </div>
+    <div class="accordion">
+
+  <div class="accordion-item">
+    <button class="accordion-btn" onclick="toggleAccordion(this)">
+      Is there an age restriction to adopt?
+      <span class="accordion-icon">&#8964;</span>
+    </button>
+   
+    <div class="accordion-content">
+      <p>All adopters must be 19 years of age or older. Those under 19 are welcome to adopt with a parent or legal guardian as the primary applicant.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-btn" onclick="toggleAccordion(this)">
+      Are there any requirements for the living space we are bringing the puppies back to?
+      <span class="accordion-icon">&#8964;</span>
+    </button>
+    <div class="accordion-content">
+      <p>Adopters must provide proof of a pet friendly living space, whether that is a owned home or a signed letter of permission from a landlord.
+      All household members must be informed and in agreement with the adoption prior to submitting an application.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-btn" onclick="toggleAccordion(this)">
+      I submitted my application! What's next?
+      <span class="accordion-icon">&#8964;</span>
+    </button>
+    <div class="accordion-content">
+      <p>A brief home assessment may be required at the discretion of our team and our partners at the International Dogs Rescue to ensure the environment is safe and suitable for a puppy.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-btn" onclick="toggleAccordion(this)">
+      How long does the application time take?
+      <span class="accordion-icon">&#8964;</span>
+    </button>
+    <div class="accordion-content">
+      <p> The length of the application process varies depending on each individual case. Larger households or more complex living situations may require additional time for review. Once your application has been assessed, we will reach out to the primary contact listed on the form with next steps!</p>
+    </div>
+  </div>
+</div>
+</div>  
+</section>
+
+<!-- the section where people can get the adoption page -->
+<section>
+    <div>
+        <p class="adoption-end-paragraph">If you feel like you are the perfect match for the puppy of your choice, please fill out the application form below. We appreciate your interest and cannot wait to help you find your forever friend!</p>
+        <div class="adopt-btn-container">
+            <a href="#" class="adopt-btn-outline">Application Form</a>
+        </div>
+        <img src="assets/banner/banner1.jpg" alt="placeholder image" />
+    </div>
+</section>
+
+
+<script>
+    function toggleAccordion(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.classList.contains('open');
+
+  // Close all open items first
+  document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+  document.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('open'));
+
+  // Open clicked one if it was closed
+  if (!isOpen) {
+    content.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+</script>
+
+<!-- Footer -->
+ <footer>
+   <div class="footer-copy">© 2024, Furrever Pals — Powered by WordPress</div>
+   <div class="social-links">
+     <a href="#">Instagram</a>
+     <a href="#">Facebook</a>
+     <a href="#">X</a>
+   </div>
+ </footer>
+
+ <script>
+   //hamburger menu
+  function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+  menu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+}
+
+// ── Fade In on Scroll ──
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // only animate once
+    }
+  });
+}, {
+  threshold: 0.15 // triggers when 15% of element is visible
+});
+
+fadeElements.forEach(el => observer.observe(el));
+
+ </script>
+</body>
+</html>
