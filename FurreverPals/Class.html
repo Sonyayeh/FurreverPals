@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <link rel="icon" type="image/png" href="assets/logo/furrever pals logo 1.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Top Nav (icons) -->
+  <nav class="top-nav">
+    <div></div>
+    <div></div>
+    <div class="nav-right">
+      <span>🔍 Search</span>
+      <span>🛒</span>
+      <span>👤</span>
+    </div>
+  </nav>
+
+     <!-- Main Nav -->
+<nav class="main-nav">
+  <div class="nav-left">
+    <a href="Class.html">Classes</a>
+    <a href="Mission.html">Our Mission</a>
+  </div>
+ <div class="logo">
+    <a href="Home.html">
+        <img src="assets/logo/furrever pals logo 1.png" alt="logo for Furrever Pals" />
+    </a>
+  </div>
+  <div class="nav-right">
+    <a href="Adopt.html">Adoption</a>
+    <a href="#">About Us</a>
+  </div>
+
+  <!-- Hamburger button, hidden on desktop -->
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu dropdown -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="Class.html">Classes</a>
+  <a href="Mission.html">Our Mission</a>
+  <a href="Adopt.html">Adoption</a>
+  <a href="#">About Us</a>
+</div>
+
+<!-- the class list -->
+<section class="puppies-section">
+  <h2 class="class-section-title">Classes</h2>
+  <p class="class-paragraph">Here are our available classes at Furrever Pals! Whether you are a beginner or an experienced yogi, there is a class for you. Book your spot today and bring home some class joy!</p>
+  
+  <div class="class-grid">
+
+    <div class="class-card">
+    <div class="class-image">
+        <img src="assets/classes/beginner.jpg" alt="Beginner yoga class with puppies" />
+        <button class="favourite-btn" onclick="toggleFavourite(this)" aria-label="Add to favourites">
+        ☆
+        </button>
+    </div>
+  <p class="class-name">Beginner Lesson</p>
+  <p class="class-price">$50 CAD</p>
+</div>
+
+    <div class="class-card">
+      <div class="class-image">
+        <img src="assets/classes/beginner.jpg" alt="Beginner yoga class with puppies" />
+        <button class="favourite-btn" onclick="toggleFavourite(this)" aria-label="Add to favourites">
+        ☆
+        </button>
+      </div>
+      <p class="class-name">Intermediate Lesson</p>
+      <p class="class-price">$50 CAD</p>
+    </div>
+
+    <div class="class-card">
+      <div class="class-image">
+       <img src="assets/classes/beginner.jpg" alt="Beginner yoga class with puppies" />
+        <button class="favourite-btn" onclick="toggleFavourite(this)" aria-label="Add to favourites">
+        ☆
+        </button>
+      </div>
+      <p class="class-name">Advanced Lesson</p>
+      <p class="class-price">$50 CAD</p>
+    </div>
+
+    <div class="class-card">
+      <div class="class-image">
+        <img src="assets/classes/beginner.jpg" alt="Beginner yoga class with puppies" />
+        <button class="favourite-btn" onclick="toggleFavourite(this)" aria-label="Add to favourites">
+        ☆
+        </button>
+      </div>
+      <p class="class-name">3 People Lesson</p>
+      <p class="class-price">$110 CAD</p>
+    </div>
+
+    <div class="class-card">
+      <div class="class-image">
+        <img src="assets/classes/beginner.jpg" alt="Beginner yoga class with puppies" />
+        <button class="favourite-btn" onclick="toggleFavourite(this)" aria-label="Add to favourites">
+        ☆
+        </button>
+      </div>
+      <p class="class-name">Private Lesson</p>
+      <p class="class-price">$75 CAD</p>
+    </div>
+
+    <div class="class-card">
+      <div class="class-image">
+        <img src="assets/classes/beginner.jpg" alt="Beginner yoga class with puppies" />
+        <button class="favourite-btn" onclick="toggleFavourite(this)" aria-label="Add to favourites">
+        ☆
+        </button>
+      </div>
+      <p class="class-name">Master Lesson</p>
+      <p class="class-price">$75 CAD</p>
+    </div>
+
+  </div>
+</section>
+
+ <!-- Newsletter -->
+  <div class="newsletter-section">
+    <h3>Sign up for our newsletter</h3>
+    <p>Receive our weekly special newsletter and potential exclusive deals</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your Email" />
+      <button>Sign Up</button>
+    </div>
+  </div>
+
+<!-- Footer -->
+ <footer>
+   <div class="footer-copy">© 2024, Furrever Pals — Powered by WordPress</div>
+   <div class="social-links">
+     <a href="#">Instagram</a>
+     <a href="#">Facebook</a>
+     <a href="#">X</a>
+   </div>
+ </footer>
+
+ <script>
+   //hamburger menu
+  function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+  menu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+}
+
+function toggleFavourite(btn) {
+  const isActive = btn.classList.contains('active');
+  btn.classList.toggle('active');
+  btn.textContent = isActive ? '☆' : '★';
+}
+
+// ── Fade In on Scroll ──
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // only animate once
+    }
+  });
+}, {
+  threshold: 0.15 // triggers when 15% of element is visible
+});
+
+fadeElements.forEach(el => observer.observe(el));
+
+ </script>
+</body>
+</html>
