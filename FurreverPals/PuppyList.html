@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Puppies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Top Nav (icons) -->
+  <nav class="top-nav">
+    <div></div>
+    <div></div>
+    <div class="nav-right">
+      <span>🔍 Search</span>
+      <span>🛒</span>
+      <span>👤</span>
+    </div>
+  </nav>
+
+     <!-- Main Nav -->
+<nav class="main-nav">
+  <div class="nav-left">
+    <a href="#">Classes</a>
+    <a href="Mission.html">Our Mission</a>
+  </div>
+ <div class="logo">
+    <a href="Home.html">
+        <img src="assets/logo/furrever pals logo 1.png" alt="logo for Furrever Pals" />
+    </a>
+  </div>
+  <div class="nav-right">
+    <a href="Adopt.html">Adoption</a>
+    <a href="#">About Us</a>
+  </div>
+
+  <!-- Hamburger button, hidden on desktop -->
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu dropdown -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">Classes</a>
+  <a href="Mission.html">Our Mission</a>
+  <a href="Adopt.html">Adoption</a>
+  <a href="#">About Us</a>
+</div>
+
+<!-- the puppy list -->
+<section class="puppies-section">
+  <h2 class="puppy-section-title">Our Puppies</h2>
+  <p class="adoption-end-paragraph">Here are the available puppies for adoption! Please keep in mind that the list is constantly changing. If you connected with a puppy, please fill in the Adoption Form in our Adoption Page!</p>
+  <div class="puppies-grid">
+    
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/leslie.jpeg" alt="Puppy photo of Border Terrier" />
+      </div>
+      <p class="puppy-name">Leslie</p>
+      <p class="puppy-breed">Border Terrier</p>
+    </div>
+
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/cameron.png" alt="Puppy photo of Corgi" />
+      </div>
+      <p class="puppy-name">Cameron</p>
+      <p class="puppy-breed">Corgi</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/darlene.jpeg" alt="Puppy photo of Dachshund" />
+      </div>
+      <p class="puppy-name">Darlene</p>
+      <p class="puppy-breed">Dachshund</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/cody.jpeg" alt="Puppy photo of Chihuahua" />
+      </div>
+      <p class="puppy-name">Cody</p>
+      <p class="puppy-breed">Chihuahua</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/savannah.jpeg" alt="Puppy photo of Cockapoo" />
+      </div>
+      <p class="puppy-name">Savannah</p>
+      <p class="puppy-breed">Cockapoo</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/raven.png" alt="Puppy photo of Maltese" />
+      </div>
+      <p class="puppy-name">Raven</p>
+      <p class="puppy-breed">Maltese</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/regina.png" alt="Puppy photo of Golden Retriever" />
+      </div>
+      <p class="puppy-name">Regina</p>
+      <p class="puppy-breed">Golden Retriever</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/gregory.jpeg" alt="Puppy photo of Dalmatian" />
+      </div>
+      <p class="puppy-name">Gregory</p>
+      <p class="puppy-breed">Dalmatian</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/julie.jpeg" alt="Puppy photo of Papillon" />
+      </div>
+      <p class="puppy-name">Julie</p>
+      <p class="puppy-breed">Papillon</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/mitchell.png" alt="Puppy photo of Burmese Mountain" />
+      </div>
+      <p class="puppy-name">Mitchell</p>
+      <p class="puppy-breed">Burmese Mountain</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/guy.jpeg" alt="Puppy photo of Sheltie" />
+      </div>
+      <p class="puppy-name">Guy</p>
+      <p class="puppy-breed">Sheltie</p>
+    </div>
+    <div class="puppy-card">
+      <div class="puppy-image">
+        <img src="assets/puppies/esther.jpeg" alt="Puppy photo of Border Collie" />
+      </div>
+      <p class="puppy-name">Esther</p>
+      <p class="puppy-breed">Border Collie</p>
+    </div>
+</div>
+</section>
+
+<section>
+    <div>
+        <h2 class="puppy-section-title">Want to Adopt?</h2>
+        <p class="adoption-end-paragraph">Meet a puppy you could see at home? Visit the Adoption page to start the adoption process and learn what comes next!</p>
+        <div class="adopt-btn-container">
+            <a href="Adopt.html" class="adopt-btn-outline">Go To Adoption Page</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+ <footer>
+   <div class="footer-copy">© 2024, Furrever Pals — Powered by WordPress</div>
+   <div class="social-links">
+     <a href="#">Instagram</a>
+     <a href="#">Facebook</a>
+     <a href="#">X</a>
+   </div>
+ </footer>
+
+ <script>
+   //hamburger menu
+  function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+  menu.classList.toggle('open');
+  hamburger.classList.toggle('open');
+}
+
+// ── Fade In on Scroll ──
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // only animate once
+    }
+  });
+}, {
+  threshold: 0.15 // triggers when 15% of element is visible
+});
+
+fadeElements.forEach(el => observer.observe(el));
+
+ </script>
+</body>
+</html>
