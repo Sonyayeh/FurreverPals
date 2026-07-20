@@ -728,12 +728,14 @@
       line-height: 1.9;
       padding-bottom: 3rem;
       color: var(--black);
+      font-family: 'Nunito';
     }
     .mission-s-paragraph {
       justify-content: center;
-      text-align: center;
+      text-align: left;
       line-height: 1.9;
       color: var(--white);
+      font-family: 'Nunito';
     }
 
     .mission-banner {
