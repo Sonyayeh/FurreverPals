@@ -368,11 +368,21 @@
     }
 
     /* Class list*/
-    .class-image {
+  .class-image {
   position: relative;
-  background: #d4c5a9;
-  aspect-ratio: 1/1;
   width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden; /* add this */
+  background: var(--white);
+}
+
+.class-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fills the box without stretching */
+  object-position: center; /* centres the image */
+  display: block;
+  object-fit: contain; 
 }
 
 
@@ -473,7 +483,7 @@
     .class-card-image {
       width: 100%;
       aspect-ratio: 4/3;
-      background: #ccc;
+      background: var(--white);
       overflow: hidden;
     }
 
@@ -486,7 +496,7 @@
     .class-card-date {
       padding: 12px 16px;
       font-size: 13px;
-      color: #555;
+      color: var(--white);
       text-align: center;
     }
 
@@ -936,7 +946,7 @@
 
    .class-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin: 40px 0;
 }
