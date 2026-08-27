@@ -737,13 +737,13 @@
     footer .social-links a:hover { opacity: 1; }
      
     /*About Page*/
+    
     .about-paragraph {
       justify-content: center;
       width: 55rem;
       justify-self: center;
       line-height: 1.9;
       padding-bottom: 3rem;
-      padding-top: 3rem;
       color: var(--black);
       font-family: 'Nunito';
     }
