@@ -256,17 +256,17 @@
     }
     .adoption-paragraph {
       justify-content: center;
-      width: 55rem;
       justify-self: center;
       line-height: 1.9;
       color: var(--black);
+      font-family: 'Nunito';
     }
     .adoption-end-paragraph {
       justify-content: center;
-      width: 55rem;
       justify-self: center;
       text-align: center;
       line-height: 1.9;
+      font-family: 'Nunito';
     }
 
     .adoption-s-paragraph {
@@ -279,21 +279,21 @@
     }
     .class-paragraph {
       justify-content: center;
-      width: 55rem;
       justify-self: center;
       line-height: 1.9;
       color: var(--black);
       padding-bottom: 2rem;
+      font-family: 'Nunito';
     }
     .class-end-paragraph {
       justify-content: center;
       text-align: center;
       line-height: 1.9;
+      font-family: 'Nunito';
     }
 
     .class-s-paragraph {
       justify-content: center;
-      width: 55rem;
       justify-self: center;
       line-height: 1.9;
       padding-bottom: 3rem;
@@ -370,6 +370,7 @@
       line-height: 1.8;
       color: #333;
       margin-bottom: 32px;
+      font-family: 'Nunito';
     }
 
     /* Class list*/
@@ -740,7 +741,6 @@
     
     .about-paragraph {
       justify-content: center;
-      width: 55rem;
       justify-self: center;
       line-height: 1.9;
       padding-bottom: 3rem;
@@ -750,7 +750,6 @@
 
     .about-sub-paragraph {
       justify-content: center;
-      width: 55rem;
       justify-self: center;
       line-height: 1.9;
       padding-bottom: 3rem;
@@ -762,7 +761,6 @@
     /*Mission Page*/
     .mission-paragraph {
       justify-content: center;
-      width: 55rem;
       justify-self: center;
       line-height: 1.9;
       padding-bottom: 3rem;
